@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.username">Pract1</property>
+    <property name="hibernate.connection.password">pract1</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/Pract1</property>
+    <mapping resource="pract1/Contrasenia.hbm.xml"/>
+    <mapping resource="pract1/Usuario.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
