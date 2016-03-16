@@ -1,0 +1,10 @@
+¿Cuánto tiempo te llevo resolver la práctica?
+
+--2 hrs, Me confundí a la hora de crear los archivos para hibernate.
+
+
+¿Como se llaman los archivos de configuraciones de Hibernate, tuviste alguna dificultad con la configuración de estos?
+
+--hibernate.cfg.xml y hibernate.reveng.xml
+
+-- No tuve problema una vez que entendí como se configuraba todo.
