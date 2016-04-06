@@ -22,13 +22,13 @@ public class Main {
         UsuarioPract1Hibernate usuariop = new UsuarioPract1Hibernate();
         ContraseniaPract1Hibernate contrap = new ContraseniaPract1Hibernate();
         Contrasenia contra = new Contrasenia();
-        contra.setIdcontrasenia(5);
-        contra.setContrasenia("1234545#");
+        contra.setIdcontrasenia(9);
+        contra.setContrasenia("hola");
         contrap.save(contra);
         Usuario usuario = new Usuario();
-        usuario.setIdusuario(6);
-        usuario.setUnombre("Lola");
-        usuario.setUapp("Buenavista");
+        usuario.setIdusuario(9);
+        usuario.setUnombre("Maria");
+        usuario.setUapp("Lopez");
         usuario.setUapm("Aguilar");
         usuario.setContrasenia(contra);
         usuariop.save(usuario);
