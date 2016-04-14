@@ -7,6 +7,7 @@
     <property name="hibernate.connection.username">Pract1</property>
     <property name="hibernate.connection.password">pract1</property>
     <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/Pract1</property>
+    <property name="hibernate.enable_lazy_load_no_trans">true</property>
     <mapping resource="pract1/Contrasenia.hbm.xml"/>
     <mapping resource="pract1/Usuario.hbm.xml"/>
   </session-factory>

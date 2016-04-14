@@ -24,7 +24,7 @@ import javax.faces.event.ActionEvent;
 @SessionScoped
 public class MBLogin implements Serializable {
     String nombre;
-    String contraseña;
+    String contrasenia;
     
      /**
      * Creates a new instance of MBLogin
@@ -36,27 +36,30 @@ public class MBLogin implements Serializable {
         return nombre;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasenia() {
+        return contrasenia;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
     }
     
     
     public int finduser(){
         UsuarioPract1Hibernate usuariop = new UsuarioPract1Hibernate();
         List<Usuario> lista = usuariop.findAll();
+        System.out.print("find USER");
         for (Usuario user : lista) {
-            if (user.getUnombre().equals(nombre)){
+            if (user.getUnombre().equals(this.getNombre())){
+                 System.out.print(this.getNombre());
                  return user.getContrasenia().getIdcontrasenia();
             }
         }
+        System.out.print("find usr");
         return -1;
     }
     
@@ -64,18 +67,23 @@ public class MBLogin implements Serializable {
         ContraseniaPract1Hibernate cont = new ContraseniaPract1Hibernate();
         List<Contrasenia> contra = cont.findAll();
         int temp = finduser();
-        String contr;
+        String contr = "";
         for(Contrasenia c : contra){
             if (c.getIdcontrasenia() == temp){
                 contr = c.getContrasenia();
+                System.out.print("find contra");
                 return contr;
             }
         }
+        System.out.print("find contra");
         return "nada";
     }
-    public String valida(ActionEvent actionEvent){
+    public String valida(){
+        System.out.print("VALIDA");
         String con = findcontra();
-        if (contraseña.equals(con))
+        System.out.print(con);
+        System.out.print(this.getContrasenia());
+        if (this.getContrasenia().equals(con))
             return "inicio";
         return "error";
     }

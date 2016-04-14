@@ -12,9 +12,9 @@
                  <h:outputText value="Nombre: " />            
                  <p:inputText id="nombre" value="#{mBLogin.nombre}" />            
             <h:outputText value="Contraseña: " />            
-            <p:password id="contraseña" value="#{mBLogin.contraseña}" />
+            <p:password id="contraseña" value="#{mBLogin.contrasenia}" />
              </h:panelGrid>            
-            <p:commandButton value="Entrar" id="ajax" actionListener="#{mBLogin.valida}" ajax="false" />
+            <p:commandButton value="Entrar" id="ajax" action="#{mBLogin.valida()}"  />
         </h:form>
     </h:body>
 </html>
